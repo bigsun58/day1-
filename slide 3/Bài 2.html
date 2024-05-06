@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phiếu Đăng kí</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      flex-basis: 30%;
+      margin-right: 10px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="tel"] {
+      flex-basis: 70%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+
+    #message {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .submit-button {
+      display: flex;
+      justify-content: center;
+    }
+
+    .submit-button input[type="button"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    /* CSS for the product selection */
+    .product-group label,
+    .product-group input[type="checkbox"] {
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+  </style>
+  <script>
+    function displayMessage() {
+      var fullName = document.getElementById("fullName").value;
+      var message = document.getElementById("message");
+      message.innerHTML = "Chúc mừng, " + fullName + "! Bạn đã đăng ký thành công.";
+    }
+  </script>
+</head>
+<body>
+  <h1>Phiếu Đăng kí</h1>
+  <form>
+    <div class="form-group">
+      <label for="fullName">Họ và Tên:</label>
+      <input type="text" id="fullName" name="fullName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Địa chỉ:</label>
+      <input type="text" id="address" name="address" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Điện thoại:</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+
+    <div class="form-group">
+      <label>Phái:</label>
+      <input type="checkbox" id="male" name="gender" value="Nam">
+      <label for="male">Nam</label>
+      <input type="checkbox" id="female" name="gender" value="Nữ">
+      <label for="female">Nữ</label>
+    </div>
+
+    <div class="form-group">
+      <label for="occupation">Nghề nghiệp:</label>
+      <select id="occupation" name="occupation">
+        <option value="Bác sĩ">Bác sĩ</option>
+        <option value="Giáo viên">Giáo viên</option>
+        <option value="Kỹ sư">Kỹ sư</option>
+        <option value="Khác">Khác</option>
+      </select>
+    </div>
+
+    <div class="form-group product-group">
+      <label>Chọn sản phẩm tham gia:</label>
+      <input type="checkbox" id="product1" name="products" value="Kem đánh răng">
+      <label for="product1">Kem đánh răng</label>
+      <input type="checkbox" id="product2" name="products" value="Bột giặt">
+      <label for="product2">Bột giặt</label>
+      <input type="checkbox" id="product3" name="products" value="Dầu gội đầu">
+      <label for="product3">Dầu gội đầu</label>
+      <input type="checkbox" id="product4" name="products" value="Sữa tắm">
+      <label for="product3">Sữa tắm</label>
+    </div>
+
+    <div class="submit-button">
+      <input type="button" value="Đăng ký" onclick="displayMessage()">
+    </div>
+
+    <div id="message"></div>
+  </form>
+</body>
+</html>

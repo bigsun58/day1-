@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Đăng ký</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    .button-group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .button-group input[type="submit"],
+    .button-group input[type="reset"] {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .reset-button input[type="reset"] {
+      background-color: #f44336;
+    }
+  </style>
+</head>
+<body>
+  <h1>Đăng ký</h1>
+  <form id="registerForm">
+    <div class="form-group">
+      <label for="fullName">Họ và tên:</label>
+      <input type="text" id="fullName" name="fullName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="username">Tên đăng nhập:</label>
+      <input type="text" id="username" name="username" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Mật khẩu:</label>
+      <input type="password" id="password" name="password" required>
+    </div>
+
+    <div class="form-group">
+      <label>Giới tính:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="Nam" required>Nam</label>
+        <label><input type="radio" name="gender" value="Nữ" required>Nữ</label>
+      </div>
+    </div>
+    
+    <div class="form-group">
+        <label>Ngôn ngữ lập trình:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="programmingLanguages" value="Ngôn ngữ C#">Ngôn ngữ C#</label>
+          <label><input type="checkbox" name="programmingLanguages" value="Ngôn ngữ Java">Ngôn ngữ Java</label>
+          <label><input type="checkbox" name="programmingLanguages" value="Ngôn ngữ PHP">Ngôn ngữ PHP</label>
+          <label><input type="checkbox" name="programmingLanguages" value="Ngôn ngữ khác">Ngôn ngữ khác</label>
+        </div>
+      </div>
+
+    <div class="form-group">
+      <label for="province">Tỉnh thành:</label>
+      <select id="province" name="province">
+        <option value="Hà Nội" selected>Hà Nội</option>
+        <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+        <option value="Đà Nẵng">Đà Nẵng</option>
+        <option value="Hải Phòng">Hải Phòng</option>
+      </select>
+    </div>
+
+    <div class="button-group">
+      <input type="reset" value="Hoàn tác">
+      <input type="submit" value="Đăng ký">
+    </div>
+  </form>
+</body>
+</html>

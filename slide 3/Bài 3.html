@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Phiếu Đăng ký Du lịch</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #6b6363;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    select,
+    input[type="text"],
+    input[type="tel"],
+    input[type="checkbox"],
+    input[type="number"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+
+    .submit-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .submit-button input[type="button"] {
+      padding: 10px 20px;
+      background-color: #7203f1;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    #message {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+  </style>
+  <script>
+    function displayMessage() {
+      var fullName = document.getElementById("fullName").value;
+      var message = document.getElementById("message");
+      message.innerHTML = "Chúc mừng, " + fullName + "! Bạn đã đăng ký thành công.";
+    }
+  </script>
+</head>
+<body>
+  <h1>Phiếu Đăng ký Du lịch</h1>
+  <form>
+    <div class="form-group">
+      <label for="fullName">Họ và Tên:</label>
+      <input type="text" id="fullName" name="fullName" required>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Địa chỉ:</label>
+      <input type="text" id="address" name="address" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Điện thoại:</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+
+    <div class="form-group">
+      <label>Khách Việt Nam:</label>
+      <input type="checkbox" id="vietnamese" name="vietnamese">
+    </div>
+
+    <div class="form-group">
+      <label for="tour">Chọn tour:</label>
+      <select id="tour" name="tour">
+        <optgroup label="Miền Bắc">
+          <option value="HaNoi-HaLong-Sapa">Hà Nội - Hạ Long - Sapa</option>
+          <option value="HaNoi-ChuaHuong-NinhBinh">Hà Nội - Chùa Hương - Ninh Bình</option>
+          <option value="HaNoi-CatBa-TuanChau">Hà Nội - Cát Bà - Tuần Châu</option>
+        </optgroup>
+        <optgroup label="Miền Trung">
+          <option value="Hue-BachMa-DaNang">Huế - Bạch Mã - Đà Nẵng</option>
+          <option value="NhaTrang-DaLat">Nha Trang - Đà Lạt</option>
+          <option value="BuonMeThuat-GiaLai-KonTum">Buôn Mê Thuật - Gia Lai - Kon Tum</option>
+        </optgroup>
+        <optgroup label="Miền Nam">
+          <option value="TPHCM-CanTho-CaMau">TP.HCM - Cần Thơ - Cà Mau</option>
+          <option value="TPHCM-MyTho">TP.HCM - Mỹ Tho</option>
+         </optgroup>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="vehicle">Phương tiện:</label>
+      <input type="checkbox" id="flight" name="vehicle" value="flight"> Máy bay
+      <input type="checkbox" id="car" name="vehicle" value="car"> Ô tô
+    </div>
+
+    <div class="form-group">
+      <label for="adults">Số lượng đoàn khách:</label>
+      <input type="number" id="adults" name="adults" placeholder="Người lớn" min="0" required>
+      <input type="number" id="children" name="children" placeholder="Trẻ em" min="0" required>
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Ghi chú thêm:</label>
+      <textarea id="notes" name="notes" rows="4"></textarea>
+    </div>
+
+    <div class="submit-button">
+      <input type="button" value="Đồng ý" onclick="displayMessage()">
+    </div>
+  </form>
+
+  <div id="message"></div>
+</body>
+</html>

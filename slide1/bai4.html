@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Sample Webpage</title>
+</head>
+<style>
+
+    body, ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+    }
+
+    ul.menu {
+        background-color: #333;
+        overflow: hidden;
+    }
+
+    ul.menu li {
+        float: left;
+    }
+
+    ul.menu li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    ul.menu li a:hover {
+        background-color: #555;
+    }
+
+    hr{
+            width: 15%;
+            size: 5px;
+            align: center;
+            color: gray;
+        }
+
+    .centered-text {
+            display: flex;
+            justify-content: center;
+            text-align: justify;
+        }
+
+    .centered-text-url {
+            display: flex;
+            justify-content: center;
+            text-align: justify;
+            margin-right: 215px;
+        }
+</style>
+<body>
+    <ul class="menu">
+        <li><a href="#file">File</a></li>
+        <li><a href="#edit">Edit</a></li>
+        <li><a href="#view">View</a></li>
+        <li><a href="#favorites">Favorites</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#help">Help</a></li>
+    </ul>
+    
+    <div class="centered-text">
+        <h1>A Sample Webpage</h1>
+    </div>
+    <hr>
+    <p class="centered-text">  To make changes to this sample webpage, add tags to this <br>
+        text and click the button marked "Generate Source." <br>
+        You'll see the revised HTML in the second text box. To <br>
+        view the revised page in a browser, click on the "View <br> 
+        Web Page" button</p>
+    <hr>
+    <p class="centered-text-url">URL: <a href="#"> BoutonJones.com</a></p>
+</body>
+</html>
